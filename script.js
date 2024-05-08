@@ -17,16 +17,16 @@ function getComputerChoice() {
     let choice = getRandomInt(1, 4);
     switch (choice) {
         case 1:
-            name = "Rock!";
+            name = "rock.png";
             break;
         case 2:
-            name = "Paper!";
+            name = "paper.png";
             break;
         case 3:
-            name = "Scissors!";
+            name = "scissors.png";
             break;
     }
-    document.querySelector('.computer').textContent = name;
+    document.querySelector('.computer').innerHTML = `<img src="${name}">`;
     return choice;
 }
 
@@ -67,12 +67,15 @@ function checkWinner() {
 
 function endGame() {
     document.querySelectorAll(".buttons").forEach(button => button.disabled = true);
+    document.querySelectorAll(".buttons").forEach(button => button.style.cursor = "auto");
     document.getElementById("playAgain").style.display = "block";
+
 }
 
 function clickButton(button) {
     let humanChoice = parseInt(button.id);
-    document.querySelector('.choice').textContent = button.textContent;
+    let imageSource = button.querySelector("img").src;
+    document.querySelector('.choice').innerHTML = `<img src="${imageSource}">`;
     let computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
     }
@@ -81,6 +84,7 @@ function playAgain() {
     playerScore = 0;
     computerScore = 0;
     document.querySelectorAll(".buttons").forEach(button => button.disabled = false);
+    document.querySelectorAll(".buttons").forEach(button => button.style.cursor = "pointer");
     document.querySelector(".playerScore").textContent = "0";
     document.querySelector(".computerScore").textContent = "0";
     document.querySelector(".choice").textContent = "";

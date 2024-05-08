@@ -1,3 +1,122 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #C7DB00;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #F78B2D;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px red;
+}
+
+.header {
+    font-size: 3em;
+    padding: 20px;
+    text-shadow: 2px 2px 5px red;
+}
+
+.weapon {
+    padding-bottom: 15px;
+}
+
+.container1 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+.buttons {
+    width: 30%;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.buttons img {
+    width: 100%;
+    transition: 0.7s;
+}
+
+.buttons img:hover {
+    transform: translateY(-8px);
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0px;
+}
+
+.result {
+    min-width: 30%;
+    margin: 0;
+}
+
+.container3 {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.container3 > * {
+    width: 30%;
+}
+
+.choice img,
+.computer img {
+    width: 100%;
+}
+
+.again {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 #playAgain {
     display: none;
+    padding: 10px;
+    background-color: #F78B2D;
+    opacity: 50%;
+    border-radius: 5px;
+    border-color: red;
+    color: red;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+#playAgain:hover {
+    opacity: 80%;
+}
+
+@media (max-width: 800px) {
+    .header {
+        font-size: 1.5em;
+    }
+
+    .container1 {
+        width: 100%;
+    }
+
+    .container3 {
+        width: 100%;
+    }
+
+    .again {
+        font-size: 0.7em;
+    }
+
+    #playAgain {
+        width: 80%;
+    }
 }

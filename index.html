@@ -8,17 +8,25 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <button class="buttons" id="1" onclick="clickButton(this)">Rock</button>
-    <button class="buttons" id="2" onclick="clickButton(this)">Paper</button>
-    <button class="buttons" id="3" onclick="clickButton(this)">Scissors</button>
-    <p class="choice"></p>
-    <p class="computer"></p>
-    <p class="result"></p>
-    <div class="counter">
+    <div class="header">Rock Paper Scissors</div>
+    <div class="weapon">Choose your weapon</div>
+    <div class="container1">
+        <button class="buttons" id="1" onclick="clickButton(this)"><img src="rock.png"></button>
+        <button class="buttons" id="2" onclick="clickButton(this)"><img src="paper.png"></button>
+        <button class="buttons" id="3" onclick="clickButton(this)"><img src="scissors.png"></button>
+    </div>
+    <div class="container2">
         <div class="playerScore">0</div>
+        <p class="result"></p>
         <div class="computerScore">0</div>
     </div>
-    <div class="finalResult"></div>
-    <button id="playAgain" onclick="playAgain()">Play again!</button>
+    <div class="container3">
+        <p class="choice"></p>
+        <div class="again">
+            <div class="finalResult"></div>
+            <button id="playAgain" onclick="playAgain()">Play again!</button>
+        </div>
+        <p class="computer"></p>
+    </div>
 </body>
 </html>
